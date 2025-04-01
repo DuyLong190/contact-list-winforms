@@ -16,5 +16,22 @@ namespace ContactList
         {
             InitializeComponent();
         }
+
+        internal void AddContact(string fullName, string phoneNumber)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            // Tạo một instance của AddContactForm
+            AddContactForm addContactForm = new AddContactForm();
+
+            // Đặt MainForm là Owner của AddContactForm để có thể truyền dữ liệu về
+            addContactForm.Owner = this;
+
+            // Hiển thị form dưới dạng hộp thoại (modal)
+            addContactForm.ShowDialog();
+        }
     }
 }
